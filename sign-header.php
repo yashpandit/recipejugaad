@@ -60,13 +60,36 @@
 
         	<div class="collapse navbar-collapse" id="navigation-example">
         		<ul class="nav navbar-nav navbar-right">
+                    <li>
+					<a href="home.php"> Home
+					</a>
+                    </li>
+                    <li>
+                        <a href="signin-page.php"> Sign In
+                        </a>
+                    </li>
+                    <li>
+                        <a href="signup-page.php">
+                            Sign Up
+                        </a>
+                    </li>
+                    <li>
+                        <a href="about.php">
+                            About Us
+                        </a>
+                    </li>
+                    <li>
+                        <a href="contact.php">
+                            Contact Us
+                        </a>
+                    </li>
 		            <li>
-		                <a href="https://www.facebook.com" target="_blank" class="btn btn-simple btn-white btn-just-icon">
+		                <a rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="https://www.facebook.com/Recipe-Jugaad-194056151080597/" target="_blank" class="btn btn-simple btn-white btn-just-icon">
 							<i class="fa fa-facebook-square"></i>
 						</a>
 		            </li>
 					<li>
-		                <a href="https://www.instagram.com" target="_blank" class="btn btn-simple btn-white btn-just-icon">
+		                <a rel="tooltip" title="Follow Us on Instagram" data-placement="bottom"  href="https://www.instagram.com/recipejugaad/" target="_blank" class="btn btn-simple btn-white btn-just-icon">
 							<i class="fa fa-instagram"></i>
 						</a>
 		            </li>
@@ -74,3 +97,21 @@
         	</div>
     	</div>
     </nav>
+    
+    
+<div class="modal fade" id="chef" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h3 class="modal-title" id="myModalLabel">Chef</h3>
+      </div>
+      <div class="modal-body">
+        <h5>Chef will be able to access the website with all its features including "Add their own recipes".</h5>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success btn-simple" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

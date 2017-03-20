@@ -11,37 +11,27 @@
 							<form class="form" method="post" action="signupscript.php">
 								<div class="header header-primary text-center">
 									<h4>Sign Up</h4>
-									<div class="social-line">
-										<a href="#pablo" class="btn btn-simple btn-just-icon">
-											<i class="fa fa-facebook-square"></i>
-										</a>
-										<a href="#pablo" class="btn btn-simple btn-just-icon">
-											<i class="fa fa-google-plus"></i>
-										</a>
-									</div>
 								</div>
-								<p class="text-divider">Or Be Classical</p>
 								<div class="content">
-
 									<div class="input-group">
 										<span class="input-group-addon">
-											<i class="material-icons">face</i>
+											<i class="material-icons">account_circle</i>
 										</span>
-										<input type="text" class="form-control" placeholder="First Name..." id="chef" name="chef">
+										<input type="text" class="form-control" placeholder="First Name..." id="chef" name="chef" required>
 									</div>
 
 									<div class="input-group">
 										<span class="input-group-addon">
 											<i class="material-icons">email</i>
 										</span>
-										<input type="email" class="form-control" placeholder="Email..." id="email" name="email" required onblur="return checkemail();">
+										<input type="email" class="form-control" placeholder="Email..." id="email" name="email" required onblur="return checkemail();" required>
 									</div>
 
 									<div class="input-group">
 										<span class="input-group-addon">
 											<i class="material-icons">lock_outline</i>
 										</span>
-										<input type="password" placeholder="Password..." class="form-control" id="password" name="password"/>
+										<input type="password" placeholder="Password..." class="form-control" required id="password" name="password"/>
 									</div>
 
 									<!-- If you want to add a checkbox to this form, uncomment this code
@@ -52,8 +42,14 @@
 											Subscribe to newsletter
 										</label>
 									</div> -->
-                                    <input type="radio" name="usertype" value="chef">Chef
-								    <input type="radio" name="usertype" value="Normal">Normal
+                                    <h6 style="margin-left:18px"><b>Select Type of User : </b></h6>
+                                    <div class="input-group" style="margin-left:53px">
+                                        <input type="radio" name="usertype" value="chef" required>&nbsp;&nbsp;CHEF&nbsp;
+                                        <span><a style="padding-left:3px" class="btn btn-simple btn-lg btn-primary" data-toggle="modal" data-target="#chef"><b>?</b></a></span>
+                                        
+								        <input type="radio" name="usertype" value="Normal" required>&nbsp;&nbsp;NORMAL&nbsp;
+                                        <span><a style="padding-left:3px" class="btn btn-simple btn-lg btn-primary" data-toggle="modal" data-target="#normalUsers"><b>?</b></a></span>
+                                    </div>
 								</div>
 								<div class="footer text-center">
 									<button name="submit" id="submit" class="btn btn-simple btn-primary btn-lg">Get Started </button>
@@ -64,11 +60,27 @@
 					</div>
 				</div>
 			</div>
-
 		</div>
-
     </div>
 
+<!-- Modal Core -->
+
+<div class="modal fade" id="normalUsers" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h3 class="modal-title" id="myModalLabel">Normal Users</h3>
+      </div>
+      <div class="modal-body">
+        <h5>Normal Users will be able to access the website with all its features except "Add their own recipes".</h5>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success btn-simple" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 </body>
 	<!--   Core JS Files   -->

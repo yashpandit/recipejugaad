@@ -2,8 +2,18 @@
 	include("header.php")
 ?>
 
+<script>
+
+    function checkLen(el) {
+      if (el.value.length != 10) {
+        alert("length must be exactly 10 characters")
+      }
+    }
+
+</script>
+
 <div class="wrapper">
-	<div class="header header-filter" style="background-image:url('assets/img/bg2.jpg');"">
+	<div class="header header-filter">
 		<div class="container">
 			<div class="row">
 			</div>
@@ -11,51 +21,62 @@
 	</div>
 
 	<div class="main main-raised">
-		<div class="section">
+		<div class="section section-basic">
 	        <div class="container">
-				<div class="row tim-row">
-	                <h2 class="text-center">Yash Pandit</h2>
-	                <legend></legend>
-	                <div class="col-md-8 col-md-offset-2">
-	                   
-	                    <p>
-	                        Email:Yashpandit1995@gmail.com<br>
-	                        Address:Ahemdabad<br>
-	                        Mo.No:9737625463<br>
-	                    </p>
-	                </div>
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 col-sm-10">
+						<div class="card card-signup">
+							<form class="form" method="post" action="#">
+								<div class="header header-primary text-center">
+									<h4>Contact Us</h4>
+								</div>
+								<div class="content">
 
-	            </div>
+									<div class="input-group">
+										<span class="input-group-addon">
+											<i class="material-icons">account_circle</i>
+										</span>
+										<input type="text" class="form-control" placeholder="Name" id="name" name="name" required> 
+									</div>
 
-	            <div class="row tim-row">
-	                <h2 class="text-center">Saloni Prajapati</h2>
-	                <legend></legend>
-	                <div class="col-md-8 col-md-offset-2">
-	                   
-	                    <p>
-	                        Email:prajaptisaloni123@gmail.com<br>
-	                        Address:Gandhinagar<br>
-	                        Mo.No:9998290110<br>
-	                    </p>
-	                </div>
+									<div class="input-group">
+										<span class="input-group-addon">
+											<i class="material-icons">email</i>
+										</span>
+										<input type="email" class="form-control" placeholder="Email" id="email" name="email" required>
+									</div>
 
-	            </div>
-	            <div class="row tim-row">
-	                <h2 class="text-center">Punit Darji</h2>
-	                <legend></legend>
-	                <div class="col-md-8 col-md-offset-2">
-	                   
-	                    <p>
-	                        Email:punitdabhi007@gmail.com<br>
-	                        Address:Ahemadabad<br>
-	                        Mo.No:9601159402<br>
-	                    </p>
-	                </div>
+									<div class="input-group">
+										<span class="input-group-addon">
+											<i class="material-icons">local_phone</i>
+										</span>
+										<input type="number" placeholder="Phone" class="form-control" id="phone" onblur="checkLen(this)" name="phone" required/>
+									</div>
 
-	            </div>
-	            
-	           
-	            
+									<div class="input-group">
+										<span class="input-group-addon">
+											<i class="material-icons">question_answer</i>
+										</span>
+                                        <textarea placeholder="Your Message" class="form-control" id="msg" name="msg" rows="5" required></textarea>
+									</div>
+								</div>
+								<div class="footer text-center">
+									<button type="submit" class="btn btn-simple btn-primary btn-lg"><b>Submit</b></button>
+								</div>
+                                
+							</form>
+						</div>
+					</div>
+                        <div class="col-md-8 col-md-offset-2 col-sm-10"><br><br><br>
+                            <h4><center>YOU CAN FIND US HERE</center></h4><hr>
+                            <iframe
+                                  width="750"
+                                  height="500"
+                                  frameborder="0" style="border:0"
+                                  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCZwBVH4DknJFJp5ETWZQsh6rceourW29o&q=LJ+Institute, Ahmedabad+India" allowfullscreen>
+                            </iframe>
+                        </div>
+				</div>
 	        </div>
 	    </div>
 	</div>
