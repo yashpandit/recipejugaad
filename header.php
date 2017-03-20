@@ -54,27 +54,16 @@
 	    <div class="collapse navbar-collapse" id="navigation-index">
 	    	<ul class="nav navbar-nav navbar-right">
 				<li>
-					<a href="home.php"> Home
-					</a>
+					<a href="home.php"> Home</a>
 				</li>
                 <li>
-					<a href="signin-page.php"> Sign In
-					</a>
+					<a href="signin-page.php"> Sign In / Sign Up</a>
 				</li>
 				<li>
-					<a href="signup-page.php">
-						Sign Up
-					</a>
+					<a href="about.php">About Us</a>
 				</li>
 				<li>
-					<a href="about.php">
-						About Us
-					</a>
-				</li>
-				<li>
-					<a href="contact.php">
-						Contact Us
-					</a>
+					<a href="contact.php">Contact Us</a>
 				</li>
 		        <li>
 					<a rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="https://www.facebook.com/Recipe-Jugaad-194056151080597/" target="_blank" class="btn btn-white btn-simple btn-just-icon">

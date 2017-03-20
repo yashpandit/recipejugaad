@@ -26,7 +26,7 @@
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 col-sm-10">
 						<div class="card card-signup">
-							<form class="form" method="post" action="#">
+							<form class="form" method="post" action="contact_action.php">
 								<div class="header header-primary text-center">
 									<h4>Contact Us</h4>
 								</div>
@@ -67,15 +67,6 @@
 							</form>
 						</div>
 					</div>
-                        <div class="col-md-8 col-md-offset-2 col-sm-10"><br><br><br>
-                            <h4><center>YOU CAN FIND US HERE</center></h4><hr>
-                            <iframe
-                                  width="750"
-                                  height="500"
-                                  frameborder="0" style="border:0"
-                                  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCZwBVH4DknJFJp5ETWZQsh6rceourW29o&q=LJ+Institute, Ahmedabad+India" allowfullscreen>
-                            </iframe>
-                        </div>
 				</div>
 	        </div>
 	    </div>

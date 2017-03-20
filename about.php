@@ -76,11 +76,11 @@
 	                       The purpose of the project is to provide users the ease of cooking food with limited resources, in a smart and efficient manner.
 	                    </p>
                         <pre style="font-size: 16px">
-                           -- Ingredients based Recipe Search
-                           -- Save Recipes
-                           -- Add your Own Recipes
-                           -- Huge Database of Recipes to choose from
-                           -- Categories of Recipes
+                        -- Ingredients based Recipe Search
+                        -- Save Recipes
+                        -- Add your Own Recipes
+                        -- Huge Database of Recipes to choose from
+                        -- Categories of Recipes
                         </pre>
 	                </div>
 	            </div>

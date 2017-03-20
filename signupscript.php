@@ -1,6 +1,6 @@
 <?php
 include("Db_con.php");
-	if(isset($_REQUEST['email']))
+if(isset($_REQUEST['email']))
 {
 	$email = $_POST['email'];
     $type = $_POST['usertype'];
