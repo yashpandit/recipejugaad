@@ -1,8 +1,8 @@
 <?php
-  $bg = array('bg1.jpg', 'bg2.jpg', 'bg3.jpg', 'bg4.jpg', 'bg5.jpg', 'bg6.jpg', 'bg7.jpg' ); // array of filenames
-
-  $i = rand(0, count($bg)-1); // generate random number size of the array
-  $selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
+	session_start();
+	$bg = array('bg1.jpg', 'bg2.jpg', 'bg3.jpg', 'bg4.jpg', 'bg5.jpg', 'bg6.jpg', 'bg7.jpg' ); // array of filenames
+	$i = rand(0, count($bg)-1); // generate random number size of the array
+	$selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
 ?>
 <!doctype html>
 <html lang="en">
@@ -52,30 +52,7 @@
 	    </div>
 
 	    <div class="collapse navbar-collapse" id="navigation-index">
-	    	<ul class="nav navbar-nav navbar-right">
-				<li>
-					<a href="home.php"> Home</a>
-				</li>
-                <li>
-					<a href="signin-page.php"> Sign In / Sign Up</a>
-				</li>
-				<li>
-					<a href="about.php">About Us</a>
-				</li>
-				<li>
-					<a href="contact.php">Contact Us</a>
-				</li>
-		        <li>
-					<a rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="https://www.facebook.com/Recipe-Jugaad-194056151080597/" target="_blank" class="btn btn-white btn-simple btn-just-icon">
-							<i class="fa fa-facebook-square"></i>
-					</a>
-				</li>
-				<li>
-					<a rel="tooltip" title="Follow us on Instagram" data-placement="bottom" href="https://www.instagram.com/recipejugaad/" target="_blank" class="btn btn-white btn-simple btn-just-icon">
-							<i class="fa fa-instagram"></i>
-					</a>
-				</li>
-	    	</ul>
+	    	<?php include('menu.php') ?>
 	    </div>
 	</div>
 </nav>

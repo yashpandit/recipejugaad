@@ -40,7 +40,7 @@
 										<span class="input-group-addon">
 											<i class="material-icons">add_shopping_cart</i>
 										</span>
-										<input type="text" class="form-control" placeholder="Ingredient 2" id="second" name="second" required>
+										<input type="text" class="form-control" placeholder="Ingredient 2" id="second" name="second">
 									</div>
 
 									<div class="input-group">

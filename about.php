@@ -22,7 +22,7 @@
                                     <a href="https://www.linkedin.com/in/yash-pandit-b14b4387/">
                                         <img src="assets/img/yash.jpg" style="border-radius:100px"><br><br>
                                         <span style="padding-left:50px">Yash Pandit</span><br>
-                                        <span style="font-size:15px; padding-left:68px">Designer</span>
+                                        <span style="font-size:15px; padding-left:28px">Designer / Developer</span>
                                     </a>
                                 </li>
                             </ul>

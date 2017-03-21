@@ -7,7 +7,7 @@ if(isset($_REQUEST['email']))
 	$sql = mysqli_query($conn,"select email from recipe_user where Email='$email' and type='$type'");
 	if(mysqli_num_rows($sql)>0)
 	{
-		echo '<span id="disp"> email already exists </span>';
+		echo "<script>alert('E-mail already exists. Please sign in using the email');window.location='signin.php';</script>";
 	}
 	else
 	{
@@ -16,20 +16,18 @@ if(isset($_REQUEST['email']))
 		$p=mysqli_real_escape_string($conn,$_POST['password']);  //password encrypted method
 		$p=md5($p);
 		$t=$_POST['usertype'];
-		//echo $p;
-		$result="insert into recipe_user(chiefname,email,password,type) values ('$u'
+		$result = "insert into recipe_user(first_name,email,password,type) values ('$u'
 		,'$e','$p','$t')";
 		if ($conn->query($result) === TRUE)
-			{
-    			echo "New record created successfully";
-    			//header("location:home.html");
-			}
-			else
-			{
-				echo '<script>alert("Hello else")</script>';
-		
-			}
-
+		{
+			echo "<script>alert('Thank you for signing up.');</script>";
+    		echo "<script>window.location='signin-page.php';</script>";
+		}
+		else
+		{
+			echo "<script>alert('There was some problem please try again later.')</script>";
+			echo "<script>window.location='signup-page.php';</script>";
+		}
 	}
 }
 ?>

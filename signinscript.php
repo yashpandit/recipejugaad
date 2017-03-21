@@ -12,11 +12,14 @@ if(isset($_POST['submit']))
         $row=mysqli_fetch_array($result);
 		if($row['password']==$p && $row['type']==$t)
 		{
-            echo "logged in successfully";
+            session_start();
+			$_SESSION['MemberLogin'] = $e;
+			$_SESSION['MemberType'] = $t;
+			echo "<script>window.location='index.php'</script>";
 		}
 		else
 		{
-            echo "check username and password";
+            echo "<script>alert('Invalid UserName or Password');window.location='signin-page.php'</script>";
 		}
 }
 else
