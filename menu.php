@@ -7,7 +7,7 @@
 				</li>';
 				if($_SESSION['MemberType'] == "chef"){
 	                echo '<li>
-						<a href="addrecipe.html">Add Recipe</a>
+						<a href="addrecipe.php">Add Recipe</a>
 					</li>
 					<li>
 						<a href="savedrecipes.php">Saved Recipes</a>

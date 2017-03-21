@@ -10,7 +10,7 @@
 		<div class="section section-basic">
 	    	<div class="container">
 	        	<div class="row tim-row">
-	                <div class="col-md-3">
+	                <div class="col-md-4">
                         <ul style="list-style-type:none; font-size: 18px">
                             <li>
                             	<br><br>
@@ -19,10 +19,9 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-md-1"></div>
                     <div class="col-md-8">
                     	<div class="card card-signup">
-							<form class="form" method="post" action="contact_action.php">
+							<form class="form" method="post" action="#" enctype="multipart/form-data">
 								<div class="header header-primary text-center">
 									<h4>Your Details</h4>
 								</div>
@@ -32,24 +31,28 @@
 										<span class="input-group-addon">
 											<i class="material-icons">account_circle</i>
 										</span>
-										<input type="text" class="form-control" placeholder="Name" id="name" name="name" required> 
+										<input type="text" class="form-control" placeholder="Name" id="name" name="name"> 
 									</div>
 
 									<div class="input-group">
 										<span class="input-group-addon">
 											<i class="material-icons">email</i>
 										</span>
-										<input type="email" class="form-control" placeholder="Email" id="email" name="email" required>
+										<input type="email" class="form-control" placeholder="Email" id="email" name="email">
 									</div>
 
 									<div class="input-group">
 										<span class="input-group-addon">
 											<i class="material-icons">local_phone</i>
 										</span>
-										<input type="number" placeholder="Phone" class="form-control" id="phone" onblur="checkLen(this)" name="phone" required/>
+										<input type="number" placeholder="Phone" class="form-control" id="phone" onblur="checkLen(this)" name="phone"/>
 									</div>
 
 									<div class="input-group">
+										<span class="input-group-addon">
+											<i class="material-icons">photo_camera</i>
+										</span><br>
+										<input type="file" name="image">
 									</div>
 								</div>
 								<div class="footer text-center">

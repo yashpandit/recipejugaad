@@ -1,5 +1,5 @@
 <?php
-	include("header.php")
+	include("header.php");
 ?>
 
 <script>
@@ -74,5 +74,5 @@
 
 </div>
 <?php
-	include("footer.php")
+	include("footer.php");
 ?>
