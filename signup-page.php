@@ -1,9 +1,12 @@
 <?php
-	include("sign-header.php")
+	include("sign-header.php");
+	error_reporting(0);
 ?>
 
     <div class="wrapper">
-		<div class="header header-filter" style="background-image: url('assets/img/bg7.jpg'); background-size: cover; background-position: top center;">
+		<div class="header header-filter" style="background-image: url('assets/img/bg4.jpg'); 
+	background-size: cover; 
+	background-position: top center;">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
@@ -24,14 +27,22 @@
 										<span class="input-group-addon">
 											<i class="material-icons">email</i>
 										</span>
-										<input type="email" class="form-control" placeholder="Email..." id="email" name="email" required onblur="return checkemail();" required>
+										<input type="email" class="form-control" placeholder="Email..." id="email" name="email" required onblur="return checkemail();">
 									</div>
 
 									<div class="input-group">
 										<span class="input-group-addon">
 											<i class="material-icons">lock_outline</i>
 										</span>
-										<input type="password" placeholder="Password..." class="form-control" required id="password" name="password"/>
+										<input type="password" placeholder="Password..." class="form-control" required id="password" name="password" minlength="6" />
+									</div>
+
+									<div class="input-group">
+										<span class="input-group-addon">
+											<i class="material-icons">done_all</i>
+										</span>
+										<input type="password" placeholder="Confirm Password..." class="form-control" required id="c_password" name="c_password" minlength="6" />
+										<span id="msg"></span>
 									</div>
 
 									<!-- If you want to add a checkbox to this form, uncomment this code
@@ -42,17 +53,17 @@
 											Subscribe to newsletter
 										</label>
 									</div> -->
-                                    <h6 style="margin-left:18px"><b>Select Type of User : </b></h6>
-                                    <div class="input-group" style="margin-left:53px">
+                                    <h6 class="userlabel1"><b>Select Type of User : </b></h6>
+                                    <div class="input-group input-group2">
                                         <input type="radio" name="usertype" value="chef" required>&nbsp;&nbsp;CHEF&nbsp;
-                                        <span><a style="padding-left:3px" class="btn btn-simple btn-lg btn-primary" data-toggle="modal" data-target="#chef"><b>?</b></a></span>
+                                        <span><a class="btn btn-simple btn-lg btn-primary" id="usertype" data-toggle="modal" data-target="#chef"><b>?</b></a></span>
                                         
 								        <input type="radio" name="usertype" value="Normal" required>&nbsp;&nbsp;NORMAL&nbsp;
-                                        <span><a style="padding-left:3px" class="btn btn-simple btn-lg btn-primary" data-toggle="modal" data-target="#normalUsers"><b>?</b></a></span>
+                                        <span><a class="btn btn-simple btn-lg btn-primary" id="usertype" data-toggle="modal" data-target="#normalUsers"><b>?</b></a></span>
                                     </div>
 								</div>
 								<div class="footer text-center">
-									<button name="submit" id="submit" class="btn btn-simple btn-primary btn-lg">Get Started </button>
+									<input type="submit" name="submit" id="submit" class="btn btn-simple btn-primary btn-lg" value="GET STARTED"></input>
 									<p><b>Already a member?</b><a href="signin-page.php" class="btn btn-simple btn-success btn-lg"><b>Sign In</b></a></p>
 								</div>
 							</form>

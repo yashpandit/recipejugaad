@@ -21,9 +21,7 @@ if(isset($_POST['submit']))
   }
   else
   {
-    echo '<script>alert("if else")</script>';
-    
-   echo'mail is not send';
+    echo '<script>alert("Mail not sent")</script>';
   }
  }
  else

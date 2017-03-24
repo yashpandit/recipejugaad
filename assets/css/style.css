@@ -1,0 +1,76 @@
+.part-header {
+    display:inline-block;
+    width:330px;
+    white-space: nowrap;
+    overflow:hidden !important;
+    text-overflow: ellipsis;
+}
+
+.brand2 {
+	margin-top: -2px;
+}
+
+.description2 {
+	font-size:20px;
+}
+
+#usertype {
+	padding-left: 3px;
+}
+
+.input-group2 {
+	margin-left:53px;
+}
+
+.userlabel1 {
+	margin-left:18px;
+}
+
+.profile-ul {
+	list-style-type:none; 
+	font-size: 18px;
+}
+
+.profile-image {
+	border-radius:100px;
+}
+
+.profile-image-span {
+	padding-left:50px;
+}
+
+.about-ul1 {
+	list-style-type:none;
+}
+
+.about-span1 {
+	font-size: 15px;
+}
+
+.font18 {
+	font-size: 18px;
+}
+
+.font16 {
+	font-size: 16px;	
+}
+
+.paddingleft60 {
+	padding-left: 60px;
+}
+
+.paddingleft40 {
+	padding-left: 40px;
+}
+
+.paddingleft68 {
+	padding-left: 68px;
+}
+
+.paddingleft48 {
+	padding-left: 48px;
+}
+
+.paddingleft28 {
+	padding-left: 28px;
+}

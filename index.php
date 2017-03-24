@@ -10,7 +10,7 @@
 				<div class="col-md-8 col-md-offset-2">
 					<div class="brand">
 						<h2>Jugaad for Recipe</h2>
-						<p style="font-size:20px">‘Recipe Jugaad’ is a website for finding recipes when you have limited ingredients and no idea what recipe to cook with those ingredients. The website provides users the ease of cooking food with limited resources, in a smart and efficient manner. The website will ask the user to enter the ingredients which he currently possesses. Once the user hits the search recipes button he will be getting a list of recipes from all the categories which he can filter as per his/her requirements. Also the website will get smarter as per the user preference and return results which are best suited for that particular user.</p>
+						<p class="description2">‘Recipe Jugaad’ is a website for finding recipes when you have limited ingredients and no idea what recipe to cook with those ingredients. The website provides users the ease of cooking food with limited resources, in a smart and efficient manner. The website will ask the user to enter the ingredients which he currently possesses. Once the user hits the search recipes button he will be getting a list of recipes from all the categories which he can filter as per his/her requirements. Also the website will get smarter as per the user preference and return results which are best suited for that particular user.</p>
 					</div>
 				</div>
 			</div>
@@ -57,19 +57,9 @@
 										<input type="text" placeholder="Ingredient 4" class="form-control" id="fourth" name="fourth" />
 										
 									</div>
-
-									<!-- If you want to add a checkbox to this form, uncomment this code
-
-									<div class="checkbox">
-										<label>
-											<input type="checkbox" name="optionsCheckboxes" checked>
-											Subscribe to newsletter
-										</label>
-									</div> -->
 								</div>
 								<div class="footer text-center">
 									<button type="submit" class="btn btn-simple btn-primary btn-lg">Find yummy recipes</button>
-									<p><b>FOR MORE ACCESS</b><a href="signup-page.php" class="btn btn-simple btn-success btn-lg"><b>Sign Up</b></a></p>
 								</div>
 							</form>
 						</div>

@@ -23,11 +23,12 @@
 
 	<!-- CSS Files -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/style.css" rel="stylesheet"/>
     <link href="assets/css/material-kit.css" rel="stylesheet"/>
     <style type="text/css">
         <!--
         .header{
-        background: url(assets/img/<?php echo $selectedBg; ?>) no-repeat;
+        	background: url(assets/img/<?php echo $selectedBg; ?>) no-repeat;
         }
         -->
     </style>
@@ -46,7 +47,7 @@
 	    	</button>
 	    	
 	        	<div class="logo-container">
-	        		<a class="navbar-brand" href="index.php"><h4 style="margin-top:-2px">Recipe Jugaad</h4></a>
+	        		<a class="navbar-brand" href="index.php"><h4 class="brand2">Recipe Jugaad</h4></a>
 				</div>
 	      	</a>
 	    </div>

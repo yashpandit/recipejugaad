@@ -34,7 +34,7 @@
                                 }
                                 else
                                 {
-                                  echo 'Some unexpected error occured please try again later.';
+                                    echo 'Some unexpected error occured please try again later.';
                                 }
     }
                             ?>

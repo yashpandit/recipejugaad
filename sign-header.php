@@ -18,6 +18,7 @@
 	<!-- CSS Files -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="assets/css/material-kit.css" rel="stylesheet"/>
+    <link href="assets/css/style.css" rel="stylesheet"/>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
     <script type="text/javascript">
     	function checkemail(){
@@ -55,17 +56,11 @@
 		            <span class="icon-bar"></span>
 		            <span class="icon-bar"></span>
         		</button>
-        		<a class="navbar-brand" href="index.php"><h4 style="margin-top:-2px">Recipe Jugaad</h4></a>
+        		<a class="navbar-brand" href="index.php"><h4 class="brand2">Recipe Jugaad</h4></a>
         	</div>
 
         	<div class="collapse navbar-collapse" id="navigation-example">
         		<ul class="nav navbar-nav navbar-right">
-                    <li>
-					   <a href="home.php"> Home</a>
-                    </li>
-                    <li>
-                        <a href="signin-page.php"> Sign In / Sign Up</a>
-                    </li>
                     <li>
                         <a href="about.php">About Us</a>
                     </li>

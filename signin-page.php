@@ -3,7 +3,9 @@
 ?>
 
     <div class="wrapper">
-		<div class="header header-filter" style="background-image: url('assets/img/bg1.jpg'); background-size: cover; background-position: top center;">
+		<div class="header header-filter" style="background-image: url('assets/img/bg1.jpg'); 
+	background-size: cover; 
+	background-position: top center;">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
@@ -27,23 +29,14 @@
 										</span>
 										<input type="password" placeholder="Password..." class="form-control" id="password" name="password" required/>
 									</div>
-
-									<!-- If you want to add a checkbox to this form, uncomment this code
-
-									<div class="checkbox">
-										<label>
-											<input type="checkbox" name="optionsCheckboxes" checked>
-											Subscribe to newsletter
-										</label>
-									</div> -->
                                     
-                                    <h6 style="margin-left:18px"><b>Select Type of User : </b></h6>
-                                    <div class="input-group" style="margin-left:53px">
+                                    <h6 class="userlabel1"><b>Select Type of User : </b></h6>
+                                    <div class="input-group input-group2">
                                         <input type="radio" name="usertype" value="chef" required>&nbsp;&nbsp;CHEF&nbsp;
-                                        <span><a style="padding-left:3px" class="btn btn-simple btn-lg btn-primary" data-toggle="modal" data-target="#chef"><b>?</b></a></span>
+                                        <span><a class="btn btn-simple btn-lg btn-primary" id="usertype" data-toggle="modal" data-target="#chef"><b>?</b></a></span>
                                         
 								        <input type="radio" name="usertype" value="Normal" required>&nbsp;&nbsp;NORMAL&nbsp;
-                                        <span><a style="padding-left:3px" class="btn btn-simple btn-lg btn-primary" data-toggle="modal" data-target="#normalUsers"><b>?</b></a></span>
+                                        <span><a class="btn btn-simple btn-lg btn-primary" id="usertype" data-toggle="modal" data-target="#normalUsers"><b>?</b></a></span>
                                     </div>
                                     
 								</div>

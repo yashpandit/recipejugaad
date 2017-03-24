@@ -1,21 +1,18 @@
 <?php
 	if(isset($_SESSION['MemberLogin']))
 	{
-		echo '<ul class="nav navbar-nav navbar-right">
-				<li>
-					<a href="home.php">Home</a>
-				</li>';
+		echo '<ul class="nav navbar-nav navbar-right">';
 				if($_SESSION['MemberType'] == "chef"){
 	                echo '<li>
 						<a href="addrecipe.php">Add Recipe</a>
 					</li>
 					<li>
-						<a href="savedrecipes.php">Saved Recipes</a>
+						<a href="save_recipe.php">Saved Recipes</a>
 					</li>';
 				}
 				else{
 					echo '<li>
-						<a href="savedrecipes.php">Saved Recipes</a>
+						<a href="save_recipe.php">Saved Recipes</a>
 					</li>';
 				}
 				echo '<li>
@@ -48,16 +45,13 @@
 	{
 		echo '<ul class="nav navbar-nav navbar-right">
 				<li>
-					<a href="home.php"> Home</a>
-				</li>
-                <li>
-					<a href="signin-page.php"> Sign In / Sign Up</a>
-				</li>
-				<li>
 					<a href="about.php">About Us</a>
 				</li>
 				<li>
 					<a href="contact.php">Contact Us</a>
+				</li>
+                <li>
+					<a href="signin-page.php"> Sign In / Sign Up</a>
 				</li>
 		        <li>
 					<a rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="https://www.facebook.com/Recipe-Jugaad-194056151080597/" target="_blank" class="btn btn-white btn-simple btn-just-icon">

@@ -13,6 +13,7 @@ if(isset($_POST['submit']))
 		if($row['password']==$p && $row['type']==$t)
 		{
             session_start();
+            $_SESSION['id'] = $row['id'];
 			$_SESSION['MemberLogin'] = $e;
 			$_SESSION['MemberType'] = $t;
 			echo "<script>window.location='index.php'</script>";
