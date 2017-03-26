@@ -27,7 +27,8 @@
 										<span class="input-group-addon">
 											<i class="material-icons">email</i>
 										</span>
-										<input type="email" class="form-control" placeholder="Email..." id="email" name="email" required onblur="return checkemail();">
+										<input type="email" class="form-control" placeholder="Email..." id="email" name="email" required>
+										<span id="disp"></span>
 									</div>
 
 									<div class="input-group">
@@ -41,7 +42,7 @@
 										<span class="input-group-addon">
 											<i class="material-icons">done_all</i>
 										</span>
-										<input type="password" placeholder="Confirm Password..." class="form-control" required id="c_password" name="c_password" minlength="6" />
+										<input type="password" placeholder="Confirm Password..." class="form-control" required id="c_password" name="c_password" minlength="6" onblur="return pass()" />
 										<span id="msg"></span>
 									</div>
 
@@ -73,7 +74,23 @@
 			</div>
 		</div>
     </div>
+<script type="text/javascript">
+	function pass()
+	{
+		var cp=document.getElementById("c_password").value;
 
+		var p=document.getElementById("password").value;
+		if(p!=cp)
+		{
+			alert("Password Not match");
+			return false;
+		}
+		else
+		{
+			return true;
+		}
+	}
+</script>
 <!-- Modal Core -->
 
 <div class="modal fade" id="normalUsers" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

@@ -20,29 +20,7 @@
     <link href="assets/css/material-kit.css" rel="stylesheet"/>
     <link href="assets/css/style.css" rel="stylesheet"/>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
-    	function checkemail(){
-            
-            $(document).ready(function(){
-            $("#email1").change(function() {
-            var name = $('#email1').val();
-            var $msg=$("#disp");
-				
-            $.ajax({
-            type: "POST",
-			url: "Signupscript.php",
-			data: "email1="+ $(this).val() ,
-				success: function(html){
-				$("#disp").html("");
-				}
-				});
-				return false;
-				}
-				});
-				});
-			}
-    </script>
-
+  
 </head>
 
 <body class="signup-page">

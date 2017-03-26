@@ -1,29 +1,53 @@
 <?php
-include "spoonacular.php";
-$token='d5855ab5152e80aacedef2372acfe596';  //food2fork
-$fooddetail=new Food($token,"json");
-$first=$_GET['first'];
-$second=$_GET['second'];
-$search='http://food2fork.com/api/search?key='.$token.'&q='.$first."+".$second;
-echo $search;
-$json=$fooddetail->call_url($search);
-if(!$json){
-echo 'Error: Could not retrieve products list.';
-exit();
-}
- $details=json_decode($json,TRUE);
-	foreach($details['recipes'] as $article) {
-    echo "<div class='part'>";
-        echo "<div class='part-header'><Strong>".$article['title']."</Strong></div>";
-         echo "<div class='part-header'>".$article['publisher']."</div>";
-          echo "<div class='part-header'>".$article['source_url']."</div>";
-          echo '<img src="'.$article['image_url'].'"/>';
-          
-    echo "</div>";
-}	
+	
+class Food
+{
+	//public $token='euPPD6XkMkmshVC1HyumHgh5doW5p1N6Zczjsn0sLC1WQbOXmF';// Private Token Of Markape
+	public $token='d5855ab5152e80aacedef2372acfe596'; //Food 2fork
+	public $response_type;
+	//public $url='https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/search?diet=vegetarian&excludeIngredients=coconut&instructionsRequired=false&intolerances=egg%2C+gluten&limitLicense=false&number=10&offset=0&query=burger&type=main+course';
+	public $url='http://food2fork.com/api/search';
+ 
+    private $verify_ssl   = false;
+	function __construct($token, $response_type="json")
+    {
+        $this->token = $token;
+        $this->response_type = $response_type;
+	}
 
+   
+    public function call_url($url){
+        return $this->sendRequest($url);
+    }
+
+    public function sendRequest($url, $timeout=100){
+    	if (function_exists('curl_init') && function_exists('curl_setopt')){
+    		$headers = array(
+	            'Cache-Control: no-cache',
+	            'key:d5855ab5152e80aacedef2372acfe596'.$this->token.
+	            'Accept:application/json'
+	            );
+	        $ch = curl_init($url);
+	        curl_setopt($ch, CURLOPT_URL, $url);
+	        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+	        curl_setopt($ch, CURLOPT_TIMEOUT, $timeout);
+	        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, $this->verify_ssl);
+			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+	        curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+	        $result = curl_exec($ch);
+	       // echo $result;
+	        curl_close($ch);
+
+	        return $result ? $result : false;
+	        
+	    }else{
+    		return false;
+	echo"sajkdad";
+	    }        
+    }
+
+}
 
 ?>
-
-
 

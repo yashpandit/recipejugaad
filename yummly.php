@@ -1,12 +1,12 @@
 <?php
 	
-class Food
+class Yummly
 {
-	//public $token='euPPD6XkMkmshVC1HyumHgh5doW5p1N6Zczjsn0sLC1WQbOXmF';// Private Token Of Markape
-	public $token='d5855ab5152e80aacedef2372acfe596'; //Food 2fork
+	public $token2='8c0104dd667d7e3e37d08ec793a046c5'; //Yummly
+	public $appid='32b240cc';//yummly app id
+	//public $attribution=';
 	public $response_type;
-	//public $url='https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/search?diet=vegetarian&excludeIngredients=coconut&instructionsRequired=false&intolerances=egg%2C+gluten&limitLicense=false&number=10&offset=0&query=burger&type=main+course';
-	public $url='http://food2fork.com/api/search';
+	public $url='http://api.yummly.com/v1/api/recipes?';
  
     private $verify_ssl   = false;
 	function __construct($token, $response_type="json")
@@ -24,7 +24,8 @@ class Food
     	if (function_exists('curl_init') && function_exists('curl_setopt')){
     		$headers = array(
 	            'Cache-Control: no-cache',
-	            'key:d5855ab5152e80aacedef2372acfe596'.$this->token.
+	            '_app_id:32b240cc'.$this->appid,
+	            '_app_key:8c0104dd667d7e3e37d08ec793a046c5'.$this->token2.
 	            'Accept:application/json'
 	            );
 	        $ch = curl_init($url);
@@ -36,14 +37,13 @@ class Food
 			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 	        curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 	        $result = curl_exec($ch);
-	       // echo $result;
+	        //echo $result;
 	        curl_close($ch);
 
 	        return $result ? $result : false;
 	        
 	    }else{
     		return false;
-	echo"sajkdad";
 	    }        
     }
 

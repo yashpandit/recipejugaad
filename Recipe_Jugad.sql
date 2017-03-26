@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 24, 2017 at 05:30 PM
+-- Generation Time: Mar 26, 2017 at 06:00 PM
 -- Server version: 10.1.9-MariaDB
 -- PHP Version: 5.6.15
 
@@ -42,7 +42,8 @@ CREATE TABLE `addrecipe` (
 --
 
 INSERT INTO `addrecipe` (`id`, `first_name`, `r_id`, `recipe_name`, `ingredients`, `picture`, `steps`, `recipedate`) VALUES
-(8, 'yashpandit1995@gmail.com', 4, 'KJEFLwe', 'kwjnlwjnl', '2015-larte-tesla-model-s-uhd-wallpapers.jpg,10338520_10152812206087801_3978243583378623474_o.jpg,1455883444015.jpg', 'wkrwnlkjn', '2017-03-24');
+(8, 'yashpandit1995@gmail.com', 4, 'KJEFLwe', 'kwjnlwjnl', '2015-larte-tesla-model-s-uhd-wallpapers.jpg,10338520_10152812206087801_3978243583378623474_o.jpg,1455883444015.jpg', 'wkrwnlkjn', '2017-03-24'),
+(9, 'p@gmail.com', 5, 'ssfdsdsfd', 'dfsdfsddfddsf', 'bg3.jpg,bg4.jpg,bg5.jpg', 'dsffdsfdsfds', '2017-03-26');
 
 -- --------------------------------------------------------
 
@@ -93,7 +94,6 @@ CREATE TABLE `recipe_user` (
   `first_name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `confirm_pass` varchar(255) NOT NULL,
   `phone` varchar(10) NOT NULL,
   `bday` date NOT NULL,
   `picture` varchar(255) NOT NULL,
@@ -108,8 +108,10 @@ CREATE TABLE `recipe_user` (
 -- Dumping data for table `recipe_user`
 --
 
-INSERT INTO `recipe_user` (`oauth_provider`, `oauth_uid`, `id`, `first_name`, `email`, `password`, `confirm_pass`, `phone`, `bday`, `picture`, `type`, `created`, `modified`, `subscription`, `status`) VALUES
-('', '', 8, 'yash', 'yashpandit1995@gmail.com', 'aa5ff452bea6c4e36525303a6334da0b', 'yashpandit', '', '0000-00-00', '', 'chef', '0000-00-00', '0000-00-00', '', '1');
+INSERT INTO `recipe_user` (`oauth_provider`, `oauth_uid`, `id`, `first_name`, `email`, `password`, `phone`, `bday`, `picture`, `type`, `created`, `modified`, `subscription`, `status`) VALUES
+('', '', 8, 'Yash Pandit', 'yash@gmail.com', 'aa5ff452bea6c4e36525303a6334da0b', '9737625463', '1995-12-21', 'yash.jpg', 'chef', '0000-00-00', '2017-03-26', '', '1'),
+('', '', 9, 'punit', 'p@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '9876543120', '2017-03-10', 'punit.jpg', 'chef', '2017-03-26', '2017-03-26', '', '1'),
+('', '', 10, 'jay', 'jay@gmail.com', '61a3dd5599a14ade5de91c212073acc2', '', '0000-00-00', '', 'chef', '2017-03-26', '2017-03-26', '', '1');
 
 -- --------------------------------------------------------
 
@@ -118,10 +120,12 @@ INSERT INTO `recipe_user` (`oauth_provider`, `oauth_uid`, `id`, `first_name`, `e
 --
 
 CREATE TABLE `save_recipe` (
+  `uid` int(11) NOT NULL,
   `id` int(11) NOT NULL,
   `user_name` varchar(255) NOT NULL,
   `recipe_name` varchar(255) NOT NULL,
-  `recipe_link` varchar(255) NOT NULL
+  `recipe_link` varchar(255) NOT NULL,
+  `image` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -182,7 +186,8 @@ ALTER TABLE `recipe_user`
 -- Indexes for table `save_recipe`
 --
 ALTER TABLE `save_recipe`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `uid` (`uid`);
 
 --
 -- Indexes for table `tbl_site_setting`
@@ -198,7 +203,7 @@ ALTER TABLE `tbl_site_setting`
 -- AUTO_INCREMENT for table `addrecipe`
 --
 ALTER TABLE `addrecipe`
-  MODIFY `r_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `r_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `adminlogin`
 --
@@ -213,7 +218,7 @@ ALTER TABLE `contact`
 -- AUTO_INCREMENT for table `recipe_user`
 --
 ALTER TABLE `recipe_user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT for table `save_recipe`
 --
@@ -233,6 +238,12 @@ ALTER TABLE `tbl_site_setting`
 --
 ALTER TABLE `addrecipe`
   ADD CONSTRAINT `addrecipe_ibfk_1` FOREIGN KEY (`id`) REFERENCES `recipe_user` (`id`);
+
+--
+-- Constraints for table `save_recipe`
+--
+ALTER TABLE `save_recipe`
+  ADD CONSTRAINT `save_recipe_ibfk_1` FOREIGN KEY (`uid`) REFERENCES `recipe_user` (`id`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
