@@ -54,7 +54,10 @@ if($details['recipes']==true || $details2['matches']==true)
 {
 	foreach($details['recipes'] as $article)
      {
-        
+        $name=$article['title'];
+        $link=$article['source_url'];
+        $publisher=$article['publisher'];
+        $img=$article['image_url'];
         echo '<div class="col-md-4">';
             echo "<div class='part-header'><a href='".$article['source_url']."' data-toogle='tooltip' title='".$article['title']."'><b>".$article['title']."</b></a></div>";
             echo "<div class='part-header'>".$article['publisher']."</div>";
@@ -62,7 +65,13 @@ if($details['recipes']==true || $details2['matches']==true)
             
             echo '<img src="'.$article['image_url'].'" width="335px" height="235px">';    
             if (isset($_SESSION['MemberLogin'])) {
-                echo "<input type='submit' name='savef2f' class='btn btn-sm btn-success' value='SAVE'>";
+                echo '<form action="savef2f.php" method="post">
+                <input type="hidden" name="rname" value="'.$name.'">
+                <input type="hidden" name="rlink" value="'.$link.'">
+                <input type="hidden" name="publisher" value="'.$publisher.'">
+                <input type="hidden" name="img" value="'.$img.'">
+                <input type="submit" name="save" class="btn btn-sm btn-success" value="SAVE">
+                </form>'; 
             }
             
         
@@ -71,17 +80,22 @@ if($details['recipes']==true || $details2['matches']==true)
         $link='http://www.yummly.co/#recipe/';  
       foreach($details2['matches'] as $article)
         {
-            $recipeName = $article['recipeName'];
-            $recipelink=$link.$article['id']; 
-            $abc=implode(" ",$article['smallImageUrls']);
+            $namey = $article['recipeName'];
+            $linky=$link.$article['id']; 
+            $imgy=implode(" ",$article['smallImageUrls']);
                 echo '<div class="col-md-4">';
                 echo "<div class='part-header'><a href='".$link.$article['id']."' data-toogle='tooltip' title='".$article['recipeName']."'><b>".$article['recipeName']."</b></a></div>";
                 
                 echo "<div class='part-header'>".$article['sourceDisplayName']."</div>";
                 echo "<div class='part-header'></div>";
-                echo '<img src="'.$abc.'" width="335px" height="235px">'; 
+                echo '<img src="'.$imgy.'" width="335px" height="235px">'; 
                 if (isset($_SESSION['MemberLogin'])) {
-                       echo "<input type='submit' name='save' class='btn btn-sm btn-success' value='SAVE'>";
+                       echo '<form action="saveyummly.php" method="post">
+                        <input type="hidden" name="rnamey" value="'.$namey.'">
+                        <input type="hidden" name="rlinky" value="'.$linky.'">
+                        <input type="hidden" name="imgy" value="'.$imgy.'">
+                        <input type="submit" name="save2" class="btn btn-sm btn-success" value="SAVE">
+                        </form>'; 
                    }   
                 
         echo '<br><hr></div>';
